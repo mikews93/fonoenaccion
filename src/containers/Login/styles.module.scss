@@ -1,0 +1,12 @@
+@import '../../styles/mixins';
+
+.login {
+  @include full-screen;
+
+  .registerSection {
+    gap: 5px;
+    padding: .5rem;
+    display: flex;
+    justify-content: center ;
+  }
+}

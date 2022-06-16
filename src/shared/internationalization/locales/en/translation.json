@@ -1,0 +1,47 @@
+{
+  "ME": "me",
+  "ABOUT": "about",
+  "WORK": "work",
+  "SKILLS": "skills",
+  "TESTIMONIALS": "testimonials",
+  "CONTACT": "contact",
+
+  "greetings": "Hi, I'm",
+
+  "external_consultant": "External Consultant",
+  "web_developer": "Web Developer",
+  "programmer": "Programmer",
+
+  "the_solution": "I will turn your ideas into profitable business solutions, want to now how?",
+  "get_in_touch": "Get in touch",
+
+  "I_know_that": "I know that",
+  "good_design": "good design",
+  "means": "means",
+  "good_business": "good business",
+
+  "some_of_my_recent": "Some of my recent",
+  "projects": "projects",
+
+  "skills": "Skills",
+  "experiences": "Experiences",
+
+  "take_a_coffee": "Take a coffee",
+  "chat_with_me": "chat with me",
+
+  "email_me": "Email me",
+
+  "your": "Your",
+  "name": "Name",
+  "email": "Email",
+  "message": "Message",
+  "send": "Send",
+  "sending": "Sending...",
+
+  "thanks_for_contacting": "Thanks for getting in touch with me!, I will get back to you as soon as possible.",
+
+  "all_rights_reserved": "All rights reserved",
+
+  "beginning": "This is the beginning of",
+  "goodness": "Something good"
+}

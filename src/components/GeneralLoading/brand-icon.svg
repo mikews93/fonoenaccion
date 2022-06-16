@@ -1,0 +1,11 @@
+<svg width="68" height="58" viewBox="0 0 68 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="30" width="10" height="28" rx="5" fill="#DE121E" class="section-1">
+  </rect>
+  <rect x="55" y="30" width="10" height="28" rx="5" fill="#DE121E" class="section-2">
+  </rect>
+  <rect x="0.256958" y="6.78826" width="9.28878" height="47.8414" rx="4.64439"
+    transform="rotate(-43.4609 0.256958 6.78826)" fill="#DE121E" class="section-3">
+  </rect>
+  <rect x="60.9" y="0.900002" width="9.28878" height="47.8414" rx="4.64439" transform="rotate(45.05 60.9 0.900002)"
+    fill="#DE121E" class="section-4"></rect>
+</svg>

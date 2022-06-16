@@ -1,0 +1,19 @@
+$primary: #edf2f8;
+$secondary: #255886;
+$black: #030303;
+$lightGray: #e4e4e4;
+$gray: #6b7688;
+$brown: #46364a;
+$white: #ffffff;
+
+.whitebg {
+  background-color: $white;
+}
+
+.primarybg {
+  background-color: $primary;
+}
+
+.secondary-bg {
+  background-color: $secondary !important;
+}

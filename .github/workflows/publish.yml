@@ -1,0 +1,79 @@
+on:
+  release:
+    types: [published]
+
+
+      # CUSTOMIZE: what is going where?
+name: Console Deployment
+
+jobs:
+  deploy:
+          # CUSTOMIZE:
+    name: Publish Console to ECR/Rancher
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Prepare Environment
+        run: |
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+
+          # CUSTOMIZE: this is the ECR repo url, + ECR repo name
+          echo "image=434020178465.dkr.ecr.us-east-2.amazonaws.com/videate-console" >> $GITHUB_ENV
+          echo "tag=$VERSION" >> $GITHUB_ENV
+
+      - name: Checkout Source Code
+        uses: actions/checkout@v2
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+        # CUSTOMIZE: the docker build may or may not run at project root
+      - name: Build & Push docker image
+        run: |
+          docker build --build-arg VERTAG=${{ env.tag }} -t ${{ env.image }}:${{ env.tag }} .
+          docker push ${{ env.image }}:${{ env.tag }}
+
+      - name: Upgrade Rancher "console" service
+        uses: sekassel-research/actions-rancher-update@1.1.4
+        with:
+          rancher_url: https://vm.videate.it
+          rancher_access: ${{ secrets.RANCHER_ACCESS_KEY }}
+          rancher_key: ${{ secrets.RANCHER_SECRET_KEY }}
+          docker_image: ${{ env.image }}:${{ env.tag }}
+
+          # CUSTOMIZE: project, stack name and service name could vary
+          project_id: 1a12
+          stack_name: production-apps-v3
+          service_name: console
+
+      - name: Slack Notify
+        if: ${{ success() }}
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_CHANNEL: eng-prod-changes
+          SLACK_COLOR: '#92c843'
+          SLACK_USERNAME: "Github Actions Notifier"
+          SLACK_ICON: http://videate-public.s3-website.us-east-2.amazonaws.com/vici-icon.png
+          SLACK_MESSAGE: "Console: ${{ github.event.release.name }}\n\n${{ github.event.release.body }}"
+          SLACK_TITLE: Deployment Succeeded
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+      - name: Notify in eng-prod-changes
+        if: ${{ failure() }}
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_CHANNEL: eng-prod-changes
+          SLACK_COLOR: '#b30000'
+          SLACK_USERNAME: "Github Actions Notifier"
+          SLACK_ICON: http://videate-public.s3-website.us-east-2.amazonaws.com/vici-icon.png
+          SLACK_MESSAGE: "Console: ${{ github.event.release.name }}\n\n${{ github.event.release.body }}"
+          SLACK_TITLE: Deployment Failed
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}

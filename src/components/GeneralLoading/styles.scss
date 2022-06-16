@@ -1,0 +1,103 @@
+@-webkit-keyframes animate-svg-fill-1 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(222, 18, 30);
+  }
+}
+
+@keyframes animate-svg-fill-1 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(222, 18, 30);
+  }
+}
+
+.section-1 {
+  -webkit-animation: animate-svg-fill-1 1.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.1s both;
+          animation: animate-svg-fill-1 1.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.1s both;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes animate-svg-fill-2 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(222, 18, 30);
+  }
+}
+
+@keyframes animate-svg-fill-2 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(222, 18, 30);
+  }
+}
+
+.section-2 {
+  -webkit-animation: animate-svg-fill-2 1.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.2s both;
+          animation: animate-svg-fill-2 1.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.2s both;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes animate-svg-fill-3 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(222, 18, 30);
+  }
+}
+
+@keyframes animate-svg-fill-3 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(222, 18, 30);
+  }
+}
+
+.section-3 {
+  -webkit-animation: animate-svg-fill-3 1.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.4s both;
+          animation: animate-svg-fill-3 1.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.4s both;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes animate-svg-fill-4 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(222, 18, 30);
+  }
+}
+
+@keyframes animate-svg-fill-4 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(222, 18, 30);
+  }
+}
+
+.section-4 {
+  -webkit-animation: animate-svg-fill-4 1.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.5s both;
+          animation: animate-svg-fill-4 1.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.5s both;
+          animation-iteration-count: infinite;
+}

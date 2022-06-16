@@ -1,0 +1,60 @@
+@import 'src/styles/colors';
+
+.social {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  bottom: 2rem;
+  
+  padding: 1rem;
+
+  div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $white;
+    margin: 0.25rem 0;
+    border: 1px solid $lightGray;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.3s ease-in-out;
+
+    img {
+      width: 15px;
+      height: 15px;
+      filter: contrast(0.1)
+    }
+
+    &:hover {
+      background-color: $secondary;
+      border-color: $secondary;
+
+      img {
+        filter: invert(1);
+      }
+    }
+
+    @media screen and (min-width: 2000px) {
+      width: 70px;
+      height: 70px;
+
+      margin: 0.5rem 0;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .social {
+    display: none;
+  }
+}
