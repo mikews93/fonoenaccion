@@ -1,0 +1,37 @@
+@import 'src/styles/colors';
+
+.integrationForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+
+  .input {
+    border-radius: 6px;
+    border: 1px solid #a9a9a9;
+    padding-left: 1rem;
+    &:hover,
+    &:active,
+    &:focus &:focus-within {
+      border: 1px solid $primary;
+    }
+  }
+  
+  .title {
+    display: flex;
+    align-items: center;
+  }
+
+  .label {
+    color: #797979;
+  }
+
+  :global {
+    .ant-form-item {
+      margin-bottom: 0.5rem !important;
+    }
+    .ant-form-item-explain-connected {
+      transform: translateY(-10px);
+      margin-left: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import 'src/styles/colors';
+@import 'src/styles/variables';
+
+$percent: 10%;
+$borderColor: #ebebeb;
+$secondaryBaseColor: #f8f8f8;
+$fontColor: lighten($black, $percent);
+
+:export {
+  colorBgBase: $background;
+  colorBgContainer: $background;
+  colorBgElevated: $secondaryBaseColor;
+  colorBgLayout: #f0f2f5;
+  colorBgSpotlight: #dbdbdb;
+  colorBgTextHover: $secondaryBaseColor;
+  colorBorder: $borderColor;
+  colorBorderSecondary: $borderColor;
+  colorError: $error;
+  colorHighlight: rgba($primary, .2);
+  colorInfo: $secondary;
+  colorLink: $fontColor;
+  colorLinkHover: $primary;
+  colorPrimary: $primary;
+  colorSecondary: #FF8080;
+  colorSuccess: $success;
+  colorTertiary: #759ECA;
+  colorText: $fontColor;
+  colorTextBase: $fontColor;
+  colorTextDisabled: #797878;
+  colorTextHeading: $fontColor;
+  colorTextSecondary: #909090;
+  colorTextTertiary: lighten($fontColor, $percent);
+  colorWarning: $warning;
+  fontFamily: $font-base;
+  radiusBase: $border-radius;
+}

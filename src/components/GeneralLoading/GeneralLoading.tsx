@@ -1,17 +1,9 @@
-import SVG from 'react-inlinesvg';
+import { AppLoading } from 'components/AppLoading/AppLoading';
 
-// @assets
-import BrandIcon from './brand-icon.svg';
-
-// @styles
-import './styles.scss';
-
-const GeneralLoading = ({ isCentered = true }: { isCentered?: boolean }) => {
+export const GeneralLoading = ({ isCentered = true }: { isCentered?: boolean }) => {
 	return (
 		<div className={isCentered ? 'absolute-center' : ''}>
-			<SVG src={BrandIcon} />
+			<AppLoading />
 		</div>
 	);
 };
-
-export default GeneralLoading;

@@ -1,114 +1,107 @@
 // @vendors
-import { useCallback, useState } from 'react';
-import { AUTH_PROFILE } from 'shared/constants';
-import { SharedDataContextType } from 'shared/context/sharedDataContext';
+import axios, { AxiosError } from 'axios';
+import { useCallback } from 'react';
 import { useSharedDataContext } from 'shared/context/useSharedData';
-import { setLocalStorage } from 'shared/utils/LocalStorage';
+import { useMutationRequest } from 'shared/hooks/useRequest';
+import { UserType } from 'shared/types/userType';
+import { setUserInApplication } from 'shared/utils/Auth';
 
-// @api
-// import VideateApi from 'libs/apiWrapper';
-const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-const randomlyFail = () => {
-	const result = Math.random() < 0.5;
-	if (!result) {
-		throw new Error('Error randomly failing');
-	}
-	return result;
+export type LoginRequest = {
+  username: string;
+  password: string;
+  rememberMe?: boolean;
 };
 
-type UseLoginReturnType = [
-	login: ({
-		username,
-		password,
-		rememberMe,
-	}: {
-		username: string;
-		password: string;
-		rememberMe: boolean;
-	}) => Promise<
-		| {
-				data: {
-					username: string;
-					password: string;
-					rememberMe: boolean;
-					name: string;
-					token: string;
-				};
-				error?: undefined;
-		  }
-		| {
-				error: unknown;
-				data?: undefined;
-		  }
-	>,
-	options: { isLoginIn: boolean }
-];
+type LoginFunctionType = ({ username, password }: LoginRequest) => Promise<
+  | {
+      data?: UserType | null;
+      error?: null;
+    }
+  | {
+      error: AxiosError;
+      data?: undefined;
+    }
+>;
 
-export const useLogin = (): UseLoginReturnType => {
-	/**
-	 * Context
-	 */
-	// @ts-ignore
-	const { setSharedData } = useSharedDataContext();
+type UseLoginOptionsType = {
+  isLoginIn: boolean;
+};
 
-	/**
-	 * State
-	 */
-	const [isLoginIn, setIsLoginIn] = useState(false);
+type UseLoginType = () => [LoginFunctionType, UseLoginOptionsType];
 
-	/**
-	 * Callbacks
-	 */
-	const login = useCallback(
-		async ({
-			username,
-			password,
-			rememberMe,
-		}: {
-			username: string;
-			password: string;
-			rememberMe: boolean;
-		}) => {
-			try {
-				randomlyFail();
-				setSharedData((prevData: SharedDataContextType) => ({
-					...prevData,
-					user: {
-						...prevData.user,
-						isFetching: true,
-						isAuthenticated: false,
-					},
-				}));
-				setIsLoginIn(true);
-				await delay(3000);
-				const data = {
-					username,
-					password,
-					rememberMe,
-					name: 'Miguel Blanco',
-					token:
-						'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTUwNTU0NzksInVzZXJJRCI6MTUxfQ.E3-CZZNGs_0luagoarhIovbX9AyazLA06fmKcVdfEgs',
-				};
-				setSharedData((prevData: SharedDataContextType) => ({
-					...prevData,
-					user: {
-						info: {
-							...data,
-						},
-						isFetching: false,
-						isAuthenticated: true,
-					},
-				}));
-				setLocalStorage({ key: AUTH_PROFILE, value: data });
-				return { data };
-			} catch (error) {
-				return { error };
-			} finally {
-				setIsLoginIn(false);
-			}
-		},
-		[delay, randomlyFail, setSharedData]
-	);
+export const useLogin: UseLoginType = () => {
+  /**
+   * hooks
+   */
+  const [sharedData, setSharedData] = useSharedDataContext();
 
-	return [login, { isLoginIn }];
+  /**
+   * Queries
+   */
+  const [loginFN, { isLoading, error }] = useMutationRequest<
+    { email: string; password: string },
+    UserType
+  >('/users/login');
+
+  /**
+   * Callbacks
+   */
+  const login = useCallback(
+    async ({ username, password }: LoginRequest) => {
+      try {
+        setSharedData((sharedData) => ({
+          ...sharedData,
+          user: { ...sharedData.user, isFetching: true },
+        }));
+        const { data: userInfo, error } = await loginFN({
+          email: username,
+          password,
+        });
+        // * in case of error return it
+        if (error) {
+          return { data: null, error };
+        }
+
+        if (userInfo) {
+          if (!!sharedData.selectedClient) {
+            const { data: clientCfg } = await axios.get(
+              `${sharedData.settings.apiUrl}/clients/${sharedData.selectedClient}/offboarding`,
+              {
+                headers: {
+                  Authorization: `Bearer ${userInfo?.token}`,
+                },
+              }
+            );
+            userInfo.clientConfig = { hasWistiaConfig: clientCfg.wistia };
+          }
+
+          if (sharedData.settings.enableSocket) {
+            // TODO remove this when new Trafficker does not use GUID to authenticate
+            const { data: legacyUserInfo } = await axios.get(
+              [sharedData.settings.legacyApiUrl, 'session/me'].join('/'),
+              {
+                headers: {
+                  Authorization: `Bearer ${userInfo?.token}`,
+                },
+              }
+            );
+            userInfo.sessions = legacyUserInfo.sessions;
+          }
+
+          setUserInApplication(userInfo, setSharedData);
+        }
+        return { data: userInfo, error: null };
+      } catch (error) {
+        return { data: null, error };
+      } finally {
+        setSharedData((sharedData) => ({
+          ...sharedData,
+          user: { ...sharedData.user, isFetching: false },
+        }));
+      }
+    },
+    [setSharedData]
+  );
+
+  return [login, { isLoginIn: isLoading, error }];
 };

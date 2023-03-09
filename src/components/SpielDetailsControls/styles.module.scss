@@ -1,0 +1,37 @@
+@import 'src/styles/variables';
+
+.spielDetailControl {
+  button {
+    border-radius: $border-radius !important;
+  }
+
+  .updateLockButton {
+    width: 40px;
+    max-width: 40px;
+    overflow: hidden;
+    transition: max-width 0.3s ease-out;
+    padding: 0px 11.5px;
+
+    span[aria-label='lock'],
+    span[aria-label='unlock'] {
+      padding-right: 2px;
+    }
+    span[aria-label='loading'] {
+      padding-right: 10px;
+    }
+
+    &:hover {
+      width: auto;
+      max-width: 300px;
+
+      span[aria-label='lock'],
+      span[aria-label='unlock'] {
+        padding-right: unset;
+      }
+    }
+  }
+
+  .menuItem {
+    color: gold !important;
+  }
+}

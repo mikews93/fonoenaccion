@@ -1,3 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
-
-$font-base: "DM Sans", sans-serif;
+@font-face {
+  font-family: 'merge_proregular';
+  src: url('/fonts/mergepro-webfont.woff2') format('woff2'),
+       url('/fonts/mergepro-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+$font-base: 'merge_proregular', sans-serif;
+$border-radius: 6px;

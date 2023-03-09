@@ -1,0 +1,53 @@
+$border-radius: 12px;
+@media (max-width: 600px) {
+  .videoPlayer {
+    width: 95% !important;
+  }
+}
+.videoPlayer {
+  border-radius: $border-radius;
+  width: 70% !important;
+
+  .closeIcon {
+    transform: scale(1.5);
+    transition: 0.5s;
+
+    &:hover {
+      transform: scale(1.8) rotate(180deg);
+    }
+  }
+
+  video {
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%),
+      0 9px 28px 8px rgb(0 0 0 / 5%);
+  }
+  :global {
+    .ant-modal-body {
+      border-radius: $border-radius;
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+      & > div:first-child {
+        border-radius: $border-radius;
+      }
+    }
+    .ant-modal-content {
+      box-shadow: none;
+      background-color: transparent;
+    }
+    .ant-modal-header {
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+      background-color: var(--fna-colorBgContainer);
+      padding: 1rem;
+      padding-bottom: 8px;
+      margin: 0;
+    }
+    .ant-modal-close {
+      top: 33px;
+      inset-inline-end: 40px;
+    }
+  }
+}

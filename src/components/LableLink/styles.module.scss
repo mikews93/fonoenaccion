@@ -1,0 +1,16 @@
+@import 'src/styles/colors';
+
+.labelLink {
+  display: flex;
+  gap: 0.5rem;
+  color: $primary;
+
+  .icon {
+    align-self: center;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

@@ -23,11 +23,7 @@
   text-align: left;
   color: $gray;
   line-height: 1.5;
-  margin-bottom: 0;
-
-  @media screen and (min-width: 2000px) {
-    font-size: 1.75rem;
-  }
+  margin: 0;
 }
 
 .bold-text {
@@ -43,4 +39,10 @@
   @media screen and (max-width: 450px) {
     font-size: 0.9rem;
   }
+}
+
+.truncate-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

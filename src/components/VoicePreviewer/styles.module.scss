@@ -1,0 +1,51 @@
+@import 'src/styles/variables';
+
+.voicePreviewer {
+  border-radius: $border-radius;
+  margin-bottom: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 2px -2px rgb(0 0 0 / 16%), 0 3px 6px 0 rgb(0 0 0 / 12%),
+    0 5px 12px 4px rgb(0 0 0 / 9%);
+  padding: 1rem;
+
+  .controlsLayout {
+    display: flex;
+    align-items: baseline;
+
+    .voiceSelect {
+      flex-grow: 1;
+    }
+
+    .control {
+      cursor: pointer;
+      border-radius: 50%;
+      padding: 0.5rem;
+      transition: 0.3s;
+      filter: brightness(0.5);
+
+      &:hover {
+        transform: scale(1.1);
+        background-color: rgba(0, 0, 0, 0.02);
+      }
+    }
+  }
+  .validation {
+    display: flex;
+    justify-content: center;
+  }
+
+  .loading {
+    animation: rotation 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+}

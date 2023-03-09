@@ -1,15 +1,57 @@
+@use "sass:math";
+
 @mixin full-screen {
   height: 100vh;
-	width: 100vw;
+  width: 100vw;
 }
 
 @mixin flex {
   display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 @mixin flex-column {
-	@include flex;
+  @include flex;
   flex-direction: column;
+  gap: 0.5rem;
+}
+
+// Function for converting a px based font-size to rem.
+@function toRem($size) {
+ @return math.div($size, 16px) * 1rem;
+}
+
+@mixin grid($columns: 1, $gap: 1rem, $padding: 0 toRem(200px), $max-width: 1700px, $margin: auto){
+  display                 : grid;
+  gap                     : $gap;
+  grid-template-columns   : repeat($columns , 1fr);
+  margin                  : $margin;
+  max-width               : $max-width;
+  padding                 : $padding;
+
+  @include mediaScreen {
+      grid-template-columns : 1fr ;
+      @content;
+  }
+}
+
+@mixin mediaScreen($measure : 480px){
+  @media screen and (max-width: $measure ) {
+      @content;
+  }
+}
+
+@mixin flexible($dis: flex, $direction: row, $wrap: wrap, $just: center, $align: center, $padding: 0 toRem(200px), $max-width: 1700px, $margin: 0 auto){
+  display         : $dis;
+  flex-direction  : $direction;
+  flex-wrap       : $wrap;
+  justify-content : $just;
+  align-items     : $align;
+  max-width       : $max-width;
+  padding         : $padding;
+  margin          : $margin;
+  
+
+  @include mediaScreen {
+    @content;
+  }
 }

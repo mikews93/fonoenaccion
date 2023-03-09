@@ -1,19 +1,18 @@
-$primary: #edf2f8;
-$secondary: #255886;
-$black: #030303;
+$primary: #144C87;
+$secondary: #79C0B8;
+$warning: #faad14;
+$success: #52c41a;
+$info: #759ECA;
+$error: #ff4d4f;
+
+$black: #000;
 $lightGray: #e4e4e4;
 $gray: #6b7688;
+$arrowGray: #dbdbdb;
 $brown: #46364a;
 $white: #ffffff;
+$primaryLight: #cee3ac;
+$primaryLightest: #fafff1cc;
 
-.whitebg {
-  background-color: $white;
-}
-
-.primarybg {
-  background-color: $primary;
-}
-
-.secondary-bg {
-  background-color: $secondary !important;
-}
+$background: $white;
+$fontColor: rgba(0, 0, 0, 0.88);

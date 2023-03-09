@@ -1,0 +1,21 @@
+.public {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  :global {
+    .ant-layout-header {
+      height: auto;
+      padding-inline: 0;
+      color: var(--fna-colorText);
+    }
+    .ant-layout-footer, .ant-layout-header {
+      background-color: var(--fna-colorBgBase);
+    }
+  } 
+
+  .content {
+    display: flex;
+    flex-grow: 1;
+  }
+}

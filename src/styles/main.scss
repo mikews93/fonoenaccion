@@ -1,5 +1,4 @@
 @import 'normalize';
-@import 'antd/dist/antd.css';
 @import 'mixins';
 @import 'colors';
 @import 'variables';
@@ -8,28 +7,12 @@
 @import 'layout';
 
 body {
-	margin: 0;
-	background-color: $primary;
-	font-family: $font-base;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--fna-colorBgBase);
 }
 
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
-.copyright {
-	width: 100%;
-	padding: 2rem;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-
-	p {
-		text-transform: capitalize;
-		color: $gray;
-	}
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }

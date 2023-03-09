@@ -1,0 +1,37 @@
+@import 'src/styles/colors';
+@import 'src/styles/variables';
+
+.componentList {
+  border-radius: 12px;
+  height: 100%;
+  background-color: var(--fna-colorBgContainer);
+
+  :global {
+    .ant-list-header {
+      font-size: 16px;
+      font-weight: 900;
+      white-space: nowrap;
+      border-bottom: 1px solid var(--fna-colorBorder);
+    }
+    .ant-list-item {
+      padding: 12px 24px;
+      font-weight: 500;
+      transition: 0.2s;
+      color: var(--fna-colorText);
+      border-radius: var(--fna-radiusBase);
+      &:hover {
+        cursor: pointer;
+        color: var(--fna-colorLinkHover);
+      }
+    }
+  }
+
+  .listItem {
+    background-color: var(--fna-colorBgContainer);
+  }
+
+  .listItem.selected {
+    background-color: var(--fna-colorBgSpotlight);
+    color: var(--fna-colorText);
+  }
+}

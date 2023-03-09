@@ -1,0 +1,158 @@
+@import 'src/styles/mixins';
+
+.start {
+  $paddingTop: toRem(87px); 
+  @include mediaScreen(1024px) {
+    padding: $paddingTop toRem(65px);
+  }
+  @include grid(2, 2rem, $margin:0 auto) {
+    padding: $paddingTop toRem(10px);
+    gap: 1rem;
+  };
+  grid-row-gap: 0;
+  min-height: calc(100vh - $paddingTop); 
+  width: 100%;
+  padding-top: $paddingTop;
+  transition: .3s;
+
+  .description {
+    @include flexible($direction:column, $padding:0){
+      text-align: center;
+    };
+    h1 {
+      font-size: 45px;
+    }
+
+    span {
+      color: var(--fna-colorTextSecondary);
+      font-size: 20px;
+    }
+    margin-bottom: 1rem;
+  }
+
+  .rightSideImage {
+    @include flexible($padding: 0);
+    img {
+      border-bottom-left-radius: 15px;
+    }
+  }
+
+
+  .appointment {
+    background-color: var(--fna-colorBgContainer);
+    border-radius: 15px;
+    border: 1px dashed var(--fna-colorBorder);
+    box-shadow: 10px 10px 15px -3px rgba(0,0,0,0.1);
+    grid-column: 1 / span 2;
+    width: 120%;
+    transform: translate(-6%, -40%);
+    max-height: 258px;
+
+    @include mediaScreen(1024px) {
+      transform: unset;
+      max-height: unset;
+      width: 100%;
+      padding: 1rem;
+    }
+    @include flexible($direction: column, $padding:1rem 2.5rem, $max-width:1500px, $margin: auto) {
+      position: relative;  
+      grid-column: unset;
+      width: 100%;
+      top: unset;
+      left: unset;
+      transform: unset;
+      max-height: unset;
+      padding: 1rem;
+    };
+    
+    .header {
+      @include flexible($just: space-between, $align: baseline, $padding: 0);
+
+      h3 {
+        font-size: 30px;
+        margin: 0;
+        margin-top: 1rem;
+        align-self: center;
+      }
+
+      .servicesMenu {
+        font-size: large;
+        @include mediaScreen(1024px) {
+          flex-wrap: wrap;
+          align-items: center;
+        }
+        @include flexible($wrap: nowrap, $padding: 0, $just: flex-start, $margin: auto 0) {
+          width: 100%;
+          flex-wrap: wrap;
+        }
+
+        li {
+          color: var(--fna-colorTextSecondary);
+        }
+      }
+      @media screen and (max-width: 1500px) {
+        flex-direction: column;
+
+        h3 {
+          padding-left: 20px;
+        }
+      }
+    }
+    
+
+    .scheduleAppointment {
+      @include mediaScreen(1024px) {
+        flex-wrap: wrap;
+        gap: 0;
+        justify-content: center;
+      }
+      @include flexible($wrap: nowrap, $just: space-between, $align: baseline, $padding: 0, $margin: 1rem 0) {
+        gap: 0;
+      };
+      gap: 1rem;
+      width: 100%;
+
+      button {
+        height: unset;
+        padding: 1.4rem 3rem;
+        font-size: large;
+      }
+      :global {
+        .ant-form-item {
+          flex: auto;
+          flex-grow: 1;
+        }
+      }
+    }
+    :global {
+      .ant-form-item {
+        width: 100%;
+        margin-bottom: 0;
+        margin-inline-end: 0;
+      }
+    }
+  }
+
+  .brands {
+    grid-column: 1 / span 2;
+    @include grid(5, 1rem, 0){
+      grid-column: unset;
+      display: none;
+    };
+
+    img {
+      filter: grayscale(1);
+      opacity: 0.6;
+    }
+  }
+
+  :global {
+    .ant-menu {
+      border: 0 !important;
+      border-inline: 0 !important;
+    }
+    .ant-menu-item-selected {
+      color: var(--fna-colorPrimary) !important;
+    }
+  }
+}

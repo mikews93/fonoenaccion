@@ -1,0 +1,74 @@
+@import 'src/styles/colors';
+@import 'src/styles/variables';
+
+.spielDetails {
+  form {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+
+    .basicInfo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .controls {
+      margin-bottom: 24px;
+    }
+
+    .editorControls {
+      border-top-left-radius: var(--fna-radiusBase);
+      border-top-right-radius: var(--fna-radiusBase);
+      border: 1px solid var(--fna-colorBorder);
+
+      .spielModes {
+        display: flex;
+        gap: 0.5rem;
+        padding: 0.5rem 0.1rem;
+        padding-right: 1rem;
+        width: auto;
+        border-top-left-radius: var(--fna-radiusBase);
+        border-top-right-radius: var(--fna-radiusBase);
+        border-right: 1px solid var(--fna-colorBorder);
+
+        :global {
+          .ant-radio-button-wrapper {
+            border: 0 !important;
+            border-radius: var(--fna-radiusBase);
+
+            &::before {
+              display: none;
+            }
+          }
+
+          .ant-radio-button-wrapper-checked {
+            color: white;
+            background-color: $primary;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .codeEditorFormItem {
+      flex: 1 1;
+      // overflow-y: auto;
+
+      :global {
+        .ant-form-item {
+          margin-bottom: 0;
+        }
+      }
+
+      .codeEditor {
+        border-top: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+  }
+}
+
+.dropZoneChildrenWrapper {
+  overflow-y: hidden;
+}

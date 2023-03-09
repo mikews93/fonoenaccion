@@ -1,0 +1,29 @@
+@import 'src/styles/colors';
+
+.select {
+  :global {
+    .ant-select-selector {
+      border-radius: var(--fna-radiusBase) !important;
+      background-color: var(--fna-colorBgElevated) !important;
+    }
+
+    .ant-select-selection-item {
+      font-weight: 700;
+      color: var(--fna-colorText);
+    }
+
+    .ant-select-arrow {
+      border-radius: 50%;
+      background-color: var(--fna-colorBgSpotlight);
+      width: 14px;
+      height: 14px;
+
+      span {
+        margin: auto;
+        font-weight: bold;
+        color: var(--fna-colorText);
+        font-size: 7px;
+      }
+    }
+  }
+}

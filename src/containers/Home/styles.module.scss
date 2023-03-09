@@ -1,7 +1,31 @@
 @import 'src/styles/colors';
 @import 'src/styles/variables';
 
-.portfolio {
-  background-color: $primary;
-  font-family: $font-base;
+.home {
+  .siteLayout {
+    display: flex;
+    min-height: 0;
+    height: 100vh;
+    position: relative;
+
+    .header {
+      padding: 1rem;
+      padding-bottom: 0;
+      background: unset;
+    }
+
+    .content {
+      margin: 1rem;
+      overflow-y: auto;
+      overflow-x: hidden;
+      height: 100%;
+      display: flex;
+    }
+
+    footer {
+      text-align: center;
+      padding: unset;
+      margin-bottom: 1rem;
+    }
+  }
 }

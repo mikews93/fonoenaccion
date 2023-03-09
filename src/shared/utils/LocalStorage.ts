@@ -8,17 +8,31 @@ import isString from 'lodash/isString';
  */
 export const getLocalStorage = (key: string) => {
   const content = localStorage.getItem(key);
+
   if (!content) {
     return '';
   }
-  return JSON.parse(content);
+
+  try {
+    return JSON.parse(content);
+  } catch (e) {
+    return '';
+  }
 };
 
 /**
  * Sets items to local storage
  * @param {Object} arguments { [string]key, [string] value, [string] key, [boolean] stringify }
  */
-export const setLocalStorage = ({ key, value, stringify = true }: { key: string, value: any, stringify?: boolean }) => {
+export const setLocalStorage = ({
+  key,
+  value,
+  stringify = true,
+}: {
+  key: string;
+  value: any;
+  stringify?: boolean;
+}) => {
   localStorage.setItem(key, stringify ? JSON.stringify(value) : value);
 };
 

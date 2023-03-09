@@ -1,47 +1,86 @@
 {
-  "ME": "me",
-  "ABOUT": "about",
-  "WORK": "work",
-  "SKILLS": "skills",
-  "TESTIMONIALS": "testimonials",
-  "CONTACT": "contact",
+	"start": "home",
+	"services": "services",
+	"shop": "shop",
+	"blog": "blog",
 
-  "greetings": "Hi, I'm",
+	"our_one": "our",
+	"our_other": "ours",
 
-  "external_consultant": "External Consultant",
-  "web_developer": "Web Developer",
-  "programmer": "Programmer",
+	"services_subtitle": "Here you will find detailed information about the services we offer to help you improve your communication and speech skills. Our highly trained speech therapist team is dedicated to providing you with a personalized and effective experience. We offer a wide range of evaluation and treatment services for children and adults with different needs.",
 
-  "the_solution": "I will turn your ideas into profitable business solutions, want to now how?",
-  "get_in_touch": "Get in touch",
+	"greetings": "Hi, I'm",
 
-  "I_know_that": "I know that",
-  "good_design": "good design",
-  "means": "means",
-  "good_business": "good business",
+	"external_consultant": "External Consultant",
+	"web_developer": "Web Developer",
+	"programmer": "Programmer",
 
-  "some_of_my_recent": "Some of my recent",
-  "projects": "projects",
+	"the_solution": "I will turn your ideas into profitable business solutions, want to now how?",
+	"get_in_touch": "Get in touch",
 
-  "skills": "Skills",
-  "experiences": "Experiences",
+	"I_know_that": "I know that",
+	"good_design": "good design",
+	"means": "means",
+	"good_business": "good business",
 
-  "take_a_coffee": "Take a coffee",
-  "chat_with_me": "chat with me",
+	"some_of_my_recent": "Some of my recent",
+	"projects": "projects",
 
-  "email_me": "Email me",
+	"experiences": "Experiences",
 
-  "your": "Your",
-  "name": "Name",
-  "email": "Email",
-  "message": "Message",
-  "send": "Send",
-  "sending": "Sending...",
+	"take_a_coffee": "Take a coffee",
+	"chat_with_me": "chat with me",
 
-  "thanks_for_contacting": "Thanks for getting in touch with me!, I will get back to you as soon as possible.",
+	"email_me": "Email me",
 
-  "all_rights_reserved": "All rights reserved",
+	"your": "Your",
+	"name": "Name",
+	"email": "Email",
+	"message": "Message",
+	"send": "Send",
+	"sending": "Sending...",
 
-  "beginning": "This is the beginning of",
-  "goodness": "Something good"
+	"thanks_for_contacting": "Thanks for getting in touch with me!, I will get back to you as soon as possible.",
+
+	"all_rights_reserved": "All rights reserved",
+
+	"beginning": "This is the beginning of",
+	"goodness": "Something good",
+
+	"start_title": "Discover and stimulate your child's communicative skills",
+	"start_text": "We specialized on children and implement most recent and effective therapies and strategies to help your child.",
+	"book_appointment": "Book an appointment now",
+	"general": "Assessment",
+	"swallowing": "Swallowing",
+	"learning": "Learning",
+	"speech_therapy": "Speech therapy",
+	"hearing": "Hearing",
+	"language": "Language",
+
+	"login": "Login",
+	"location": "Location",
+	"appointmentDate": "Appointment date",
+	"who": "Who",
+
+	"child_one": "child",
+	"child_other": "children",
+
+	"search": "Search",
+
+	"about": "Who are we?",
+	"aboutMessage": "We are a children's speech therapy office, designed to work to support children in their challenges in their communication by providing services in the areas of language, speech and fluency. \n\nOur attention is based on respectful intervention, taking into account the development of each child and their own needs, with the aim of promoting their social communication in all communicative contexts.",
+
+	"testimonials_title": "Don't take our word for it.",
+	"testimonials_subtile": "trust our customers",
+
+	"whereToFindUs": "Where to find us?",
+	"currentAddress": "Edificio central 39 Street South #40-73, Zone 9, Envigado, Antioquia",
+	"howToGetHere": "How to get here",
+
+	"general_assessment_description": "initial evaluation that performs a phonoaudiologist to determine the specific needs of a patient in relation to their communication capacity. During this appointment, tests are performed to evaluate hearing, speech, language, fluidity and swallowing of the patient. An interview with the patient and his family is also carried out to obtain information about their medical background, concerns and treatment objectives. At the end of the appointment, the phonoaudiologist will discuss the results of the tests and provide recommendations for the treatment for the treatment Patient of the patient ",
+	"swallowing_assessment_description": "It focuses on helping people to swallow in a safe and efficient way. This therapy is designed to help those who have difficulty swallowing due to health problems such as Parkinson's disease, stroke or cancer . ",
+	"learning_assessment_description": "It focuses on helping children develop reading, writing and understanding skills. Learning therapy is designed to help those who have difficulty reading and writing due to learning disorders such as dyslexia, dysgraph or auditory processing disorder. ",
+	"speech_therapy_assessment_description": "Speech therapy can help improve pronunciation, rhythm and intonation of speech, which can significantly improve the communication and quality of life of the patient. During speech therapy sessions, the speech therapy will work in close collaboration with the patient to identify their individual needs and develop a personalized treatment plan to address their areas of difficulty. ",
+	"hearing_assessment_description": "It focuses on improving patient audition include the adaptation of hearing aids and auditory rehabilitation. ",
+	"language_assessment_description": "It focuses on improving people's ability to communicate effectively. This therapy is designed to help those who have difficulty speaking, understanding or using language. Language therapy can include the development of communication skills social, the improvement of grammar and syntax, and the expansion of vocabulary. "
 }

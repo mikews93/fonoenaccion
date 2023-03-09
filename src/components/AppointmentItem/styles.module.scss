@@ -1,0 +1,58 @@
+@import 'src/styles/variables';
+
+.appointmentItem {
+  display: flex;
+  gap: 1rem;
+  border-radius: $border-radius;
+  border: 1px solid var(--fna-colorBorder);
+  padding: .5rem;
+  margin-bottom: 1rem;
+
+  .iconsLayout {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+
+    display: flex;
+    align-items: center;
+    color: var(--fna-colorBgBase);
+
+    span[role="img"] {
+      margin: auto;
+      transform: scale(1.5);
+    }
+  }
+
+  .primary {
+    background-color: var(--fna-colorPrimary);
+  }
+  .secondary {
+    background-color: var(--fna-colorBgBase);
+    border: 1px solid var(--fna-colorInfo);
+    color: var(--fna-colorInfo);
+  }
+
+  .appointmentItemLayout {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    .name {
+      color: var(--fna-colorTextSecondary);
+      font-size: medium;
+    }
+
+    .value {
+      font-size: large;
+
+      .appointmentInput {
+        width: 100%;
+        border: 0;
+        
+        & > div:first-child {
+          border: 0;
+        }
+      }
+    }
+  }
+}

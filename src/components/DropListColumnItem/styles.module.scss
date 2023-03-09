@@ -1,0 +1,13 @@
+@import 'src/styles/colors';
+
+.dropListColumnItemProps {
+  overflow-wrap: anywhere;
+}
+.dropListColumnItemProps:hover {
+  background-color: var(--fna-colorBgElevated);
+}
+
+.isDragging {
+  background: $primaryLight;
+  color: var(--fna-colorTextDisabled) !important;
+}

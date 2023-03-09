@@ -1,0 +1,38 @@
+@import 'src/styles/colors';
+
+.playlistLink {
+  border-radius: 1rem;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  line-height: 32px;
+
+  .type {
+    text-transform: uppercase;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border: 1px solid $primary;
+    background-color: $primary;
+    padding: 0 0.5rem;
+    color: white;
+    width: 50px;
+    text-align: center;
+  }
+
+  .link {
+    padding: 0 0.5rem;
+    color: gray;
+    background-color: white;
+    flex-grow: 1;
+    border: 1px solid $primary;
+    border-right: 0;
+  }
+
+  .actions {
+    border: 1px solid $primary;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    display: flex;
+  }
+}

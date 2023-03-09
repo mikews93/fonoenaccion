@@ -1,4 +1,3 @@
-// @vendors
 import { Navigate, useLocation } from 'react-router-dom';
 
 // @utils
@@ -16,6 +15,6 @@ export const RestrictedRoutes = ({ children }: RestrictedRoutesProps) => {
 	return isUserAuthenticated() ? (
 		children
 	) : (
-		<Navigate to={ROUTES.LOGIN} state={{ from: location }} replace />
+		<Navigate to={ROUTES.PUBLIC} state={{ from: location }} replace />
 	);
 };

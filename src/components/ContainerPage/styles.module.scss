@@ -1,0 +1,15 @@
+@import 'src/styles/colors';
+
+.containerPage {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  div[role='content'] {
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}

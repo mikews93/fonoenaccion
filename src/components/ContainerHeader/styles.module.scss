@@ -1,0 +1,28 @@
+@import 'src/styles/colors';
+
+.containerHeader {
+  border-bottom: 1px solid var(--fna-colorBorder);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding: 20px;
+
+  h4 {
+    margin: 4px 0;
+  }
+
+  :global {
+    .ant-page-header-back-button {
+      color: var(--fna-colorLink);
+    }
+    .ant-page-header-back-button:hover {
+      color: var(--fna-colorLinkHover);
+    }
+  }
+}
+
+.tag {
+  border-radius: 4px;
+  border: none;
+  background-color: var(--fna-colorBgElevated);
+  color: var(--fna-colorTextSecondary);
+}

@@ -1,0 +1,33 @@
+.personaForm {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  margin-bottom: auto;
+
+  button[type='submit'] {
+    margin-left: auto;
+  }
+
+  .slider {
+    align-items: center;
+    background-color: var(--fna-colorBgElevated);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    min-width: auto !important;
+    padding: 10px 30px;
+    grid-gap: 20px;
+    gap: 20px;
+
+    :global {
+      .ant-slider {
+        width: 100%;
+      }
+
+      .ant-slider-rail {
+        background-color: var(--fna-colorBgSpotlight);
+      }
+    }
+  }
+}

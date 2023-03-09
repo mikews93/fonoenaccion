@@ -5,25 +5,26 @@ import translationES from 'shared/internationalization/locales/es/translation.js
 
 // the translations
 const resources = {
-  en: {
-    translation: translationEN
-  },
-  es: {
-    translation: translationES
-  },
+	en: {
+		translation: translationEN,
+	},
+	es: {
+		translation: translationES,
+	},
 };
 
 i18next.use(LanguageDetector).init({
-  detection: {
-    order: ['navigator', 'querystring', 'cookie', 'localStorage', 'htmlTag', 'path', 'subdomain']
-  },
-  fallbackLng: 'en-US',
-  interpolation: {
-    escapeValue: false
-  },
-  keySeparator: false,
-  resources
+	detection: {
+		order: ['navigator', 'querystring', 'cookie', 'localStorage', 'htmlTag', 'path', 'subdomain'],
+	},
+	fallbackLng: 'en-US',
+	interpolation: {
+		escapeValue: false,
+	},
+	keySeparator: false,
+	resources,
 });
 
 export const translate = i18next.t;
 
+export const currentLanguage = i18next.language;

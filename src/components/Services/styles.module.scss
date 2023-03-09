@@ -1,0 +1,77 @@
+@import 'src/styles/mixins';
+
+.services {
+  min-height: 100vh; 
+  padding: 0 toRem(200px);
+  width: 100%;
+
+  @include mediaScreen(1024px) {
+    padding: 0 toRem(65px);
+  }
+  @include flexible(flex, column, nowrap, space-evenly, center) {
+    padding: 0 toRem(10px);
+  };
+
+  .header {
+    text-align: center;
+    margin: auto;
+    margin: 3rem;
+
+    .title {
+      font-size: 45px;
+    }
+
+    .subTitle {
+      color: var(--fna-colorTextSecondary);
+      font-size: 20px;
+      text-align: justify;
+      white-space: pre-wrap;
+    }
+  }
+
+  .layout {
+    @include mediaScreen(1024px) {
+      grid-template-columns: 1fr;
+    }
+    @include grid(3, 2rem, 0, $margin: 1rem auto) {
+      gap: 1rem;
+    };
+
+    .serviceItem {
+      @include flexible(flex, column, nowrap, space-evenly, center);
+      background-color: var(--fna-colorPrimary);
+      border-radius: var(--fna-radiusBase);
+      box-shadow: 10px 10px 15px -3px rgba(0,0,0,0.1);
+      flex-grow: 1;
+      padding: 2rem;
+      transition: .3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      .icon {
+        @include flexible(flex, row, nowrap, center,center);
+        background-color: var(--fna-colorSecondary);
+        border-radius: 50%;
+        padding: 2rem;
+
+        svg {
+          filter: brightness(100);
+          transform: scale(2);
+        }
+        svg.noFilter {
+          filter: unset;
+        }
+      }
+
+      .serviceTitle, .serviceDescription {
+        color: var(--fna-colorBgElevated);
+      }
+
+      .serviceDescription {
+        text-align: center;
+      }
+    }
+  }
+}

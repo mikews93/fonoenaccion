@@ -1,0 +1,14 @@
+.instances {
+  :global {
+    .ant-menu-item {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+      height: auto !important;
+      margin-bottom: 0.7rem;
+    }
+
+    .ant-menu-submenu-title {
+      pointer-events: none; // disable pointer events to prevent expansion of the menu item on click
+    }
+  }
+}

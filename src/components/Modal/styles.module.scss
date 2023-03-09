@@ -1,0 +1,13 @@
+@import 'src/styles/variables';
+
+.modal {
+  :global {
+    .ant-modal-header {
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+    }
+    .ant-modal-content {
+      border-radius: $border-radius;
+    }
+  }
+}

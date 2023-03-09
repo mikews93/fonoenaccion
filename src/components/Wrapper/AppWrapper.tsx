@@ -1,19 +1,38 @@
-// @component
-// import NavigationDots from 'components/NavigationDots/NavigationDots';
+import { ReactNode } from 'react';
+import { useSharedDataContext } from 'shared/context/useSharedData';
 
 // @styles
 import styles from './styles.module.scss';
 
 interface AppWrapperProps {
-	children: JSX.Element;
-	idName: string;
-	classNames?: string;
+	children: ReactNode;
+	className?: string;
+	idName?: string;
+	background?: 'white' | 'regular';
 }
 
-const AppWrapper = ({ children, idName, classNames = '' }: AppWrapperProps) => (
-	<div id={idName} className={`${classNames} container`}>
-		<div className={`${styles.wrapper} flex`}>{children}</div>
-		{/* <NavigationDots active={idName} /> */}
-	</div>
-);
+const AppWrapper = ({
+	className = '',
+	children,
+	idName,
+	background = 'white',
+}: AppWrapperProps) => {
+	/**
+	 * hooks
+	 */
+	const [{ theme }] = useSharedDataContext();
+
+	return (
+		<div
+			id={idName}
+			className={`${styles.wrapper} ${className} container`}
+			style={{
+				background: background === 'white' ? theme?.colorBgBase : theme?.colorBgLayout,
+				color: theme?.colorTextBase,
+			}}
+		>
+			{children}
+		</div>
+	);
+};
 export default AppWrapper;

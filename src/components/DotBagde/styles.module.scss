@@ -1,0 +1,80 @@
+@import 'src/styles/colors';
+
+$badgeSize: 1rem;
+
+.dotBadge {
+  margin: auto 0;
+  margin-top: 11px;
+  display: block;
+  width: $badgeSize;
+  height: $badgeSize;
+  border-radius: 50%;
+  background-color: $primary;
+  position: relative;
+  flex: 1rem 0 0;
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: $badgeSize;
+    height: $badgeSize;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    transform: scale(0);
+    transform-origin: center center;
+    animation-timing-function: linear;
+    animation-iteration-count: 2;
+    animation-duration: 2s;
+    animation-name: statusAnimation;
+    background-color: $primary;
+  }
+  &:after {
+    animation-delay: 1s;
+  }
+}
+
+@keyframes statusAnimation {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  70% {
+    opacity: 0.09;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.dotBadge.instance_launched {
+  background-color: $primary;
+  &:before,
+  :after {
+    background-color: $primary;
+  }
+}
+.dotBadge.instance_requested,
+.dotBadge.encoder_progress,
+.dotBadge.publish_complete,
+.dotBadge.ui_video_stop,
+.dotBadge.become_environment {
+  background-color: $warning;
+  &:before,
+  :after {
+    background-color: $warning;
+  }
+}
+
+.dotBadge.instance_deregistered {
+  background-color: $arrowGray;
+  &:before,
+  :after {
+    background-color: $arrowGray;
+  }
+}

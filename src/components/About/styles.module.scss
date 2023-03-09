@@ -1,0 +1,63 @@
+@import 'src/styles/mixins';
+
+.about {
+  @include grid(2, 2rem, 0, $max-width: 100%) {
+    gap: 1rem
+  };
+  min-height: 100vh;
+  transition: .3s;
+
+  .content {
+    @include mediaScreen(1024px) {
+      padding-left: 70px;
+    }
+    @include flexible(flex, column, $padding: 0 0 0 200px) {
+      padding: 0 1rem;
+    };
+    margin-top: 3rem;
+    justify-content: flex-start;
+    min-width: 400px;
+    background: url('/images/aboutBg.png') no-repeat left bottom;
+    background-size: 100%;
+
+    .title {
+      margin-bottom: 3rem;
+      font-size: 45px;
+      text-align: center;
+    }
+
+    .description {
+      color: var(--fna-colorTextTertiary);
+      font-size: 23px;
+      text-align: justify;
+      white-space: pre-wrap;
+    }
+  }
+
+  .rightPane {
+    background: url('images/kidsBackground.jpeg') no-repeat right top fixed;
+    background-size: contain;
+    transition: .3s;
+
+    @include mediaScreen {
+      display: none;
+    }
+  }
+
+  @include mediaScreen(1300px) {
+    .content {
+      background-position: center bottom;
+    }
+  }
+
+  @include mediaScreen(1100px) {
+    .content {
+      background-position: center bottom;
+    }
+  }
+  @include mediaScreen(800px) {
+    .rightPane {
+      background-size: cover;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+$contentGap: 16px;
+$listPaneWidth: 300px;
+$contentPaneMinWidth: $listPaneWidth + $contentGap;
+
+.environments {
+  display: flex;
+  height: 100%;
+  flex-flow: column;
+
+  :global {
+    .ant-modal-content {
+      padding: 0 !important;
+    }
+  }
+
+  .extra {
+    display: none;
+  }
+
+  .contentLayout {
+    display: flex;
+    gap: $contentGap;
+    height: 100%;
+    width: 100%;
+    .listPane {
+      width: $listPaneWidth;
+    }
+    .contentPane {
+      display: flex;
+      width: calc(100% - $contentPaneMinWidth);
+      flex: 1 0 $contentPaneMinWidth;
+    }
+  }
+  @media (max-width: 600px) {
+    .extra {
+      display: block;
+    }
+    .contentLayout {
+      display: flex;
+      flex-direction: column;
+
+      .listPane {
+        display: none;
+      }
+      .contentPane {
+        display: flex;
+        width: 100%;
+      }
+    }
+  }
+}

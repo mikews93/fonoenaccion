@@ -1,0 +1,42 @@
+$contentGap: 16px;
+$listPaneWidth: 300px;
+
+.playlist {
+  :global {
+    .ant-form-item {
+      margin: 0 !important;
+    }
+    .ant-modal-content {
+      padding: 0 !important;
+    }
+  }
+  .extra {
+    display: none;
+  }
+
+  .contentLayout {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 1rem;
+    flex-flow: column;
+    height: 100%;
+    width: 100%;
+    .listPane {
+      width: $listPaneWidth;
+      min-width: 0;
+    }
+  }
+  @media (max-width: 600px) {
+    .contentLayout {
+      display: flex;
+      flex-direction: column;
+
+      .listPane {
+        display: none;
+      }
+    }
+    .extra {
+      display: block;
+    }
+  }
+}

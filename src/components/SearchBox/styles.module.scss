@@ -1,0 +1,17 @@
+.searchBox {
+  border-radius: 120px !important;
+  width: 368px !important;
+  height: unset !important;
+  color: #aba9a9 !important;
+
+  :global {
+    .ant-input-clear-icon {
+      font-size: 1rem;
+      padding: 0;
+    }
+
+    .anticon {
+      margin: 0 0.5rem;
+    }
+  }
+}

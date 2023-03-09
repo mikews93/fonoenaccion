@@ -1,0 +1,16 @@
+.newSpiel {
+  form {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    width: 100%;
+
+    .codeEditorFormItem {
+      flex: 1 1;
+    }
+
+    button[type='submit'] {
+      float: right;
+    }
+  }
+}

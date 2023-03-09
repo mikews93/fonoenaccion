@@ -1,0 +1,37 @@
+@import 'src/styles/colors';
+@import 'src/styles/variables';
+
+$percent: 10%;
+$baseColor: #181a1b;
+$fontColor: darken($white, $percent);
+$secondaryBaseColor: #1f2223;
+$borderColor: #363a3c;
+
+:export {
+  colorBgBase: $baseColor;
+  colorBgContainer: $baseColor;
+  colorBgElevated: $secondaryBaseColor;
+  colorBgLayout: $secondaryBaseColor;
+  colorBgSpotlight: #2c3032;
+  colorBgTextHover: $secondaryBaseColor;
+  colorBorder: $borderColor;
+  colorBorderSecondary: $borderColor;
+  colorError: $error;
+  colorHighlight: rgba($primary, .2);
+  colorInfo: $secondary;
+  colorLink: $fontColor;
+  colorLinkHover: $primary;
+  colorPrimary: $primary;
+  colorSecondary: #FF8080;
+  colorSuccess: $success;
+  colorTertiary: #759ECA;
+  colorText: $fontColor;
+  colorTextDisabled: #4f4c46;
+  colorTextHeading: $fontColor;
+  colorTextPlaceholder: #6c6a67;
+  colorTextSecondary: #a29a8e;
+  colorTextTertiary: darken($fontColor, $percent);
+  colorWarning: $warning;
+  fontFamily: $font-base;
+  radiusBase: $border-radius;
+}

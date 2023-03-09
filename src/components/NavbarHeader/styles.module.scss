@@ -1,0 +1,90 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.navbarHeader {
+  @include mediaScreen(1024px) {
+    padding: 0 toRem(35px);
+  }
+  @include flexible($just: space-between, $wrap: nowrap, $max-width: 100%) {
+    padding: 0 10px;
+  };
+  position: fixed;
+  background-color: transparent;
+  backdrop-filter: blur(4px);
+  z-index: 3;
+  width: 100%;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+
+  .logo{
+    display: flex;
+    flex-direction: row;
+    min-width: fit-content;
+
+    svg {
+      margin: .5rem;
+      height: 55px;
+      width: 60px;
+    }
+
+    h3 {
+      margin: 0;
+      align-self: center;
+      color: var(--fna-colorPrimary);
+      white-space: nowrap;
+    }
+  }
+
+  .rightSection {
+    display: flex;
+    height: 100%;
+    margin: auto 0;
+    gap: 3rem;
+    align-items: baseline;
+
+    .menu {
+      backdrop-filter: blur(4px);
+      background-color: transparent;
+      font-size: large;
+      gap: 1rem;
+      margin: auto;
+      padding-right: toRem(200px);
+      position: relative;
+      @include mediaScreen(1024px) {
+        gap: 0;
+        padding-right: toRem(130px);
+      }
+      @include flexible ($padding: 0, $align: flex-start) {
+        padding-right: 0;
+      }
+
+      li {
+        line-height: 26px;
+        color: var(--fna-colorTextSecondary);
+      }
+
+      .loginButton {
+        height: unset;
+        padding: .5rem 2rem;
+        border-radius: calc($border-radius * 2);
+        position: absolute;
+        transform: translateY(-20%);
+      }
+      :global {
+        .ant-menu-overflow-item-rest {
+            border: 2px solid var(--fna-colorTertiary);
+            padding: 4px 10px;
+            transform: translateY(-3px);
+        }
+      }
+    }
+  }
+
+  :global {
+    .ant-menu-horizontal {
+      border-bottom: unset;
+    }
+    .ant-menu-item-selected {
+      color: var(--fna-colorPrimary) !important;
+    }
+  }
+}

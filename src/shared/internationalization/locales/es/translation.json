@@ -1,47 +1,86 @@
 {
-  "ME": "inico",
-  "ABOUT": "acerca de",
-  "WORK": "Mis trabajos",
-  "SKILLS": "habilidades",
-  "TESTIMONIALS": "testimonios",
-  "CONTACT": "contactame",
+	"start": "inicio",
+	"services": "servicios",
+	"shop": "tienda",
+	"blog": "blog",
 
-  "greetings": "Hola, soy",
+	"our_one": "nuestro",
+	"our_other": "nuestros",
 
-  "external_consultant": "Consultor externo",
-  "web_developer": "Desarrollador web",
-  "programmer": "Programador",
+	"services_subtitle": "Aquí encontrarás información detallada sobre los servicios que ofrecemos para ayudarte a mejorar tu comunicación y habilidades del habla. Nuestro equipo de fonoaudiólogos altamente capacitados está dedicado a brindarte una experiencia personalizada y efectiva. Ofrecemos una amplia gama de servicios de evaluación y tratamiento para niños y adultos con diferentes necesidades.",
 
-  "the_solution": "Convierto tus ideas en negocios rentables, ¿quieres saber como?",
-  "get_in_touch": "Contactame",
+	"greetings": "Hola, soy",
 
-  "I_know_that": "Se que",
-  "good_design": "buen diseño",
-  "means": "significa",
-  "good_business": "buen negocio",
+	"external_consultant": "Consultor externo",
+	"web_developer": "Desarrollador web",
+	"programmer": "Programador",
 
-  "some_of_my_recent": "Algunos de mis recientes",
-  "projects": "proyectos",
+	"the_solution": "Convierto tus ideas en negocios rentables, ¿quieres saber como?",
+	"get_in_touch": "Contactame",
 
-  "skills": "Habilidades",
-  "experiences": "Experiencias",
+	"I_know_that": "Se que",
+	"good_design": "buen diseño",
+	"means": "significa",
+	"good_business": "buen negocio",
 
-  "take_a_coffee": "Toma un café",
-  "chat_with_me": "chatea conmigo",
+	"some_of_my_recent": "Algunos de mis recientes",
+	"projects": "proyectos",
 
-  "email_me": "Envíame un correo",
+	"skills": "Habilidades",
+	"experiences": "Experiencias",
 
-  "your": "Tu",
-  "name": "nombre",
-  "email": "correo electrónico",
-  "message": "mensaje",
-  "send": "Enviar",
-  "sending": "Enviando...",
+	"take_a_coffee": "Toma un café",
+	"chat_with_me": "chatea conmigo",
 
-  "thanks_for_contacting": "Gracias por contactarme!, te responderé a la brevedad",
+	"email_me": "Envíame un correo",
 
-  "all_rights_reserved": "Todos los derechos reservados",
+	"your": "Tu",
+	"name": "nombre",
+	"email": "correo electrónico",
+	"message": "mensaje",
+	"send": "Enviar",
+	"sending": "Enviando...",
 
-  "beginning": "Este es el comienzo de",
-  "goodness": "algo grande"
+	"thanks_for_contacting": "Gracias por contactarme!, te responderé a la brevedad",
+
+	"all_rights_reserved": "Todos los derechos reservados",
+
+	"beginning": "Este es el comienzo de",
+	"goodness": "algo grande",
+
+	"start_title": "Descubre y estimula las habilidades comunicativas de tu niño",
+	"start_text": "Nos especializamos en niños e implementamos las terapias y estrategias recientes y efectivas para ayudar a tu hijo.",
+	"general": "Valoración",
+	"book_appointment": "Agenda una cita ahora",
+	"swallowing": "Deglución",
+	"learning": "Aprendizaje",
+	"speech_therapy": "Terapia de habla",
+	"hearing": "Audición",
+	"language": "Lenguaje",
+
+	"login": "Iniciar sesion",
+	"location": "Sede",
+	"appointmentDate": "Fecha de la cita",
+	"who": "Quien",
+	"child_one": "niño",
+	"child_other": "niños",
+
+	"search": "Buscar",
+
+	"about": "¿Quienes somos?",
+	"aboutMessage": "Somos un consultorio de fonoaudiología infantil, destinado a trabajar a apoyar a los niños en sus desafíos en su comunicación brindando los servicios en las áreas de lenguaje, habla y fluidez. \n\nNuestra atención se basa en la intervención respetuosa, teniendo en cuenta el desarrollo de cada niño y sus propias necesidades, con el objetivo de favorecer su comunicación social en todos los contextos comunicativos.",
+
+	"testimonials_title": "No confíe en nuestra palabra.",
+	"testimonials_subtile": "Confíe en nuestros clientes",
+
+	"whereToFindUs": "¿Donde nos puedes encontrar?",
+	"currentAddress": "Edificio central Calle 39 Sur #40-73, Zona 9, Envigado, Antioquia",
+	"howToGetHere": "¿Como llegar?",
+
+	"general_assessment_description": "evaluación inicial que realiza un fonoaudiólogo para determinar las necesidades específicas de un paciente en relación con su capacidad de comunicación. Durante esta cita, se realizan pruebas para evaluar la audición, el habla, el lenguaje, la fluidez y la deglución del paciente. También se lleva a cabo una entrevista con el paciente y su familia para obtener información sobre sus antecedentes médicos, preocupaciones y objetivos de tratamiento. Al final de la cita, el fonoaudiólogo discutirá los resultados de las pruebas y proporcionará recomendaciones para el tratamiento personalizado del paciente",
+	"swallowing_assessment_description": "se enfoca en ayudar a las personas a tragar de manera segura y eficaz. Esta terapia está diseñada para ayudar a aquellos que tienen dificultades para tragar debido a problemas de salud como la enfermedad de Parkinson, el accidente cerebrovascular o el cáncer.",
+	"learning_assessment_description": "se enfoca en ayudar a los niños a desarrollar habilidades de lectura, escritura y comprensión. La terapia de aprendizaje está diseñada para ayudar a aquellos que tienen dificultades para leer y escribir debido a trastornos del aprendizaje como la dislexia, la disgrafía o el trastorno del procesamiento auditivo.",
+	"speech_therapy_assessment_description": "La terapia de habla puede ayudar a mejorar la pronunciación, el ritmo y la entonación del habla, lo que puede mejorar significativamente la comunicación y la calidad de vida del paciente. Durante las sesiones de terapia de habla, el fonoaudiólogo trabajará en estrecha colaboración con el paciente para identificar sus necesidades individuales y desarrollar un plan de tratamiento personalizado para abordar sus áreas de dificultad.",
+	"hearing_assessment_description": "se enfoca en mejorar la audición de los pacientes. Esta terapia está diseñada para ayudar a aquellos que tienen problemas de audición debido a la edad, el ruido, la exposición a sustancias tóxicas o una enfermedad. La terapia de audición puede incluir la adaptación de audífonos y la rehabilitación auditiva.",
+	"language_assessment_description": "se enfoca en mejorar la capacidad de las personas para comunicarse efectivamente. Esta terapia está diseñada para ayudar a aquellos que tienen dificultades para hablar, entender o usar el lenguaje. La terapia de lenguaje puede incluir el desarrollo de habilidades de comunicación social, la mejora de la gramática y la sintaxis, y la ampliación del vocabulario."
 }

@@ -1,38 +1,86 @@
 .container {
-	width: 100%;
-	min-height: 100vh;
-
-	display: flex;
-	flex-direction: row;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
 }
 
 .flex {
-	@include flex;
+  @include flex;
+}
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center {
+  text-align: center;
+  align-items: center;
+}
+
+.full-screen {
+  @include full-screen;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+// ---------------- gaps ----------------------
+.gp-1 {
+  gap: 0.25rem;
+}
+
+.gp-2 {
+  gap: 0.5rem;
+}
+
+.gp-3 {
+  gap: 0.75rem;
+}
+
+.gp-4 {
+  gap: 1rem;
+}
+
+// ---------------- alignment ----------------------
+.align-baseline {
+  align-items: baseline;
+}
+
+.align-center {
+  align-items: center;
+}
+
+// ---------------- justify content ----------------
+
+.flex-end {
+  @include flex;
+  justify-content: flex-end;
+}
+
+.space-between {
+  @include flex;
+  justify-content: space-between;
+}
+
+.space-around {
+  @include flex;
+  justify-content: space-around;
+}
+
+.justify-center {
+  @include flex;
+  justify-content: center;
 }
 
 .flex-column {
   @include flex-column;
-}
-
-.absolute-center {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.center {
-	text-align: center;
-}
-
-.full-screen {
-	@include full-screen;
-}
-
-.full-width {
-	width: 100%;
-}
-
-.full-height {
-	height: 100%;
 }
