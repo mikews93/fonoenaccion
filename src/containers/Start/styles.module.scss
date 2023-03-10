@@ -135,10 +135,12 @@
 
   .brands {
     grid-column: 1 / span 2;
-    @include grid(5, 1rem, 0){
+    @include flexible($padding: 0){
       grid-column: unset;
       display: none;
     };
+    gap: 1rem;
+    width: 100%;
 
     img {
       filter: grayscale(1);

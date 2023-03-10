@@ -66,6 +66,11 @@
       flex-direction: column;
       justify-content: space-between;
       border-left: 1px solid var(--fna-colorBorder);
+      
+      @include mediaScreen {
+        border: 0;
+        border-top: 1px solid var(--fna-colorBorder);
+      };
 
       .videoTitle {
         margin: 0;
