@@ -1,7 +1,9 @@
-import { Avatar, Button, Card, Typography } from 'antd';
+import { Avatar, Button, Card, Image, Typography } from 'antd';
 import { WhatsAppOutlined } from '@ant-design/icons';
 import { capitalize } from 'lodash';
 import Meta from 'antd/es/card/Meta';
+import classNames from 'classnames';
+import moment from 'moment';
 
 // @components
 import MotionWrap from 'components/Wrapper/MotionWrapper';
@@ -37,6 +39,7 @@ export default function Shop() {
 			seller: '/images/startBanner.jpeg',
 			title: 'autism_course_title',
 			type: translate('course'),
+			expiresAt: moment('02-18-2024'),
 			actions: [
 				<Paypal />,
 				<Button
@@ -48,8 +51,8 @@ export default function Shop() {
 			],
 			characteristics: [
 				`${capitalize(translate('autism_formation'))}`,
-				`${capitalize(translate('course_lenght', { hours: 6 }))}`,
-				`${capitalize(translate('ebook_memorias'))}`,
+				`${capitalize(translate('course_length', { hours: 6 }))}`,
+				`${capitalize(translate('ebook_memorials'))}`,
 				`${capitalize(translate('recording_availability', { days: 8 }))}`,
 			],
 		},
@@ -64,31 +67,34 @@ export default function Shop() {
 				)}`}</Typography.Title>
 			</div>
 			<MotionWrap className={styles.content}>
-				{products.map((product) => (
-					<Card
-						key={product.key}
-						className={styles.productItem}
-						cover={<img alt='cover' width={300} src={product.cover} />}
-						actions={product.actions}
-					>
-						<Meta
-							avatar={<Avatar src={product.seller} />}
-							title={`${capitalize(translate(product.title))}`}
-							description={
-								<>
-									{`${capitalize(
-										translate('included_with_product', { product_type: product.type })
-									)}`}
-									<ul>
-										{product.characteristics.map((characteristic, index) => (
-											<li key={index}>{characteristic}</li>
-										))}
-									</ul>
-								</>
-							}
-						/>
-					</Card>
-				))}
+				{products.map((product) => {
+					const isAvailable = moment().isBefore(product.expiresAt);
+					return (
+						<Card
+							key={product.key}
+							className={classNames(styles.productItem, { [styles.unavailable]: !isAvailable })}
+							cover={<Image alt='cover' src={product.cover} />}
+							actions={product.actions}
+						>
+							<Meta
+								avatar={<Avatar src={product.seller} />}
+								title={`${capitalize(translate(product.title))}`}
+								description={
+									<>
+										{`${capitalize(
+											translate('included_with_product', { product_type: product.type })
+										)}`}
+										<ul>
+											{product.characteristics.map((characteristic, index) => (
+												<li key={index}>{characteristic}</li>
+											))}
+										</ul>
+									</>
+								}
+							/>
+						</Card>
+					);
+				})}
 			</MotionWrap>
 		</div>
 	);

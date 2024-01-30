@@ -1,11 +1,11 @@
 // @styles
 import { ReactNode } from 'react';
-import { FcIdea } from 'react-icons/fc';
+// import { FcIdea } from 'react-icons/fc';
 import { RiUserVoiceLine } from 'react-icons/ri';
-import { FaAssistiveListeningSystems } from 'react-icons/fa';
+// import { FaAssistiveListeningSystems } from 'react-icons/fa';
 import { TbTriangleSquareCircle } from 'react-icons/tb';
 import { TbLanguage } from 'react-icons/tb';
-import { GiFruitBowl } from 'react-icons/gi';
+// import { GiFruitBowl } from 'react-icons/gi';
 
 import {
 	CalendarOutlined,
@@ -39,15 +39,15 @@ import { PARTIAL_SERVICES } from 'shared/constants';
 import styles from './styles.module.scss';
 import { useSharedDataContext } from 'shared/context/useSharedData';
 import { getWhatsappMessageMeURL } from 'shared/utils/SocialMedia';
-import { formatDate } from 'shared/utils/Date';
+// import { formatDate } from 'shared/utils/Date';
 import moment from 'moment';
 
 const iconsMapper: { [key in PARTIAL_SERVICES]: ReactNode } = {
 	[PARTIAL_SERVICES.general]: <TbTriangleSquareCircle />,
-	[PARTIAL_SERVICES.swallowing]: <GiFruitBowl />,
-	[PARTIAL_SERVICES.learning]: <FcIdea />,
+	// [PARTIAL_SERVICES.swallowing]: <GiFruitBowl />,
+	// [PARTIAL_SERVICES.learning]: <FcIdea />,
 	[PARTIAL_SERVICES.speech_therapy]: <RiUserVoiceLine />,
-	[PARTIAL_SERVICES.hearing]: <FaAssistiveListeningSystems />,
+	// [PARTIAL_SERVICES.hearing]: <FaAssistiveListeningSystems />,
 	[PARTIAL_SERVICES.language]: <TbLanguage />,
 };
 

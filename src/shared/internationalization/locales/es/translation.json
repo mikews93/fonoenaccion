@@ -89,8 +89,8 @@
 	"included_with_product": "includio con el {{product_type}}",
 
 	"autism_formation": "formación en evaluación e intervención de niños en el espectro",
-	"course_lenght": "{{hours}} horas de formación",
-	"ebook_memorias": "ebook del curso y material de evaluación",
+	"course_length": "{{hours}} horas de formación",
+	"ebook_memorials": "ebook del curso y material de evaluación",
 	"recording_availability": "grabación disponible hasta {{days}} días después del curso",
 
 	"send_payment_proof": "enviar comprobante de pago",

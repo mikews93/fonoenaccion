@@ -8,7 +8,7 @@ import { Root } from 'components/Root/Root';
 import './styles/main.scss';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-	// <StrictMode>
-	<Root />
-	// </StrictMode>
+	<StrictMode>
+		<Root />
+	</StrictMode>
 );
