@@ -6,13 +6,13 @@ import { matchRoutes, RouteObject, useLocation } from 'react-router-dom';
  * @returns string
  */
 export const useCurrentPath = (routes: RouteObject[]) => {
-  const location = useLocation();
+	const location = useLocation();
 
-  const getPath = () => {
-    const match = matchRoutes(routes, location);
+	const getPath = () => {
+		const match = matchRoutes(routes, location);
 
-    return match ? match[0].route.path : '';
-  };
+		return match ? match[0].route.path : '';
+	};
 
-  return getPath;
+	return getPath;
 };

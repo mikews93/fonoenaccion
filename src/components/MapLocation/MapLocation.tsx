@@ -52,15 +52,10 @@ export const MapLocation = () => {
 					</div>
 					<div className={styles.videoLayout}>
 						<Typography.Title level={3} className={styles.videoTitle}>
-							{`${translate('howToGetHere')}`}
+							{/* {`${translate('howToGetHere')}`} */}
+							{`${translate('our_office')}`}
 						</Typography.Title>
-						<ReactPlayer
-							stopOnUnmount
-							width='100%'
-							loop
-							muted
-							url='https://www.youtube.com/shorts/VM54XihgL7Q'
-						/>
+						<ReactPlayer stopOnUnmount width='100%' loop muted url='/assets/office.mp4' />
 						<span className={styles.address}>
 							<EnvironmentOutlined />
 							<Typography.Text>

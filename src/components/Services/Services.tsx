@@ -28,32 +28,32 @@ type ServiceItem = {
 	icon: ReactNode;
 };
 
-const servicesMapper: { [key in PARTIAL_SERVICES]: ServiceItem } = {
+const servicesMapper: Record<PARTIAL_SERVICES, ServiceItem> = {
 	[PARTIAL_SERVICES.general]: {
 		title: capitalize(translate(PARTIAL_SERVICES.general)),
 		description: capitalize(translate('general_assessment_description')),
 		icon: <TbTriangleSquareCircle />,
 	},
-	[PARTIAL_SERVICES.swallowing]: {
-		title: capitalize(translate(PARTIAL_SERVICES.swallowing)),
-		description: capitalize(translate('swallowing_assessment_description')),
-		icon: <GiFruitBowl />,
-	},
-	[PARTIAL_SERVICES.learning]: {
-		title: capitalize(translate(PARTIAL_SERVICES.learning)),
-		description: capitalize(translate('learning_assessment_description')),
-		icon: <FcIdea className={styles.noFilter} />,
-	},
+	// [PARTIAL_SERVICES.swallowing]: {
+	// 	title: capitalize(translate(PARTIAL_SERVICES.swallowing)),
+	// 	description: capitalize(translate('swallowing_assessment_description')),
+	// 	icon: <GiFruitBowl />,
+	// },
+	// [PARTIAL_SERVICES.learning]: {
+	// 	title: capitalize(translate(PARTIAL_SERVICES.learning)),
+	// 	description: capitalize(translate('learning_assessment_description')),
+	// 	icon: <FcIdea className={styles.noFilter} />,
+	// },
 	[PARTIAL_SERVICES.speech_therapy]: {
 		title: capitalize(translate(PARTIAL_SERVICES.speech_therapy)),
 		description: capitalize(translate('speech_therapy_assessment_description')),
 		icon: <RiUserVoiceLine />,
 	},
-	[PARTIAL_SERVICES.hearing]: {
-		title: capitalize(translate(PARTIAL_SERVICES.hearing)),
-		description: capitalize(translate('hearing_assessment_description')),
-		icon: <FaAssistiveListeningSystems />,
-	},
+	// [PARTIAL_SERVICES.hearing]: {
+	// 	title: capitalize(translate(PARTIAL_SERVICES.hearing)),
+	// 	description: capitalize(translate('hearing_assessment_description')),
+	// 	icon: <FaAssistiveListeningSystems />,
+	// },
 	[PARTIAL_SERVICES.language]: {
 		title: capitalize(translate(PARTIAL_SERVICES.language)),
 		description: capitalize(translate('language_assessment_description')),
@@ -82,12 +82,13 @@ export const Services = () => {
 					transition={{ duration: 0.5, delayChildren: 0.5 }}
 					className={styles.layout}
 				>
-					{Object.values(servicesMapper).map(({ title, description, icon }) => {
+					{Object.values(servicesMapper).map(({ title, description, icon }, index) => {
 						return (
 							<motion.div
 								whileInView={{ opacity: [0, 1] }}
 								transition={{ duration: 0.5, delayChildren: 0.5 }}
 								className={styles.serviceItem}
+								key={index}
 							>
 								<div className={styles.icon}>{icon}</div>
 								<Typography.Title level={3} className={styles.serviceTitle}>

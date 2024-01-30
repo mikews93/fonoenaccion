@@ -82,5 +82,17 @@
 	"learning_assessment_description": "It focuses on helping children develop reading, writing and understanding skills. Learning therapy is designed to help those who have difficulty reading and writing due to learning disorders such as dyslexia, dysgraph or auditory processing disorder. ",
 	"speech_therapy_assessment_description": "Speech therapy can help improve pronunciation, rhythm and intonation of speech, which can significantly improve the communication and quality of life of the patient. During speech therapy sessions, the speech therapy will work in close collaboration with the patient to identify their individual needs and develop a personalized treatment plan to address their areas of difficulty. ",
 	"hearing_assessment_description": "It focuses on improving patient audition include the adaptation of hearing aids and auditory rehabilitation. ",
-	"language_assessment_description": "It focuses on improving people's ability to communicate effectively. This therapy is designed to help those who have difficulty speaking, understanding or using language. Language therapy can include the development of communication skills social, the improvement of grammar and syntax, and the expansion of vocabulary. "
+	"language_assessment_description": "It focuses on improving people's ability to communicate effectively. This therapy is designed to help those who have difficulty speaking, understanding or using language. Language therapy can include the development of communication skills social, the improvement of grammar and syntax, and the expansion of vocabulary.",
+
+	"course": "course",
+	"autism_course_title": "course for assessment and intervention professionals for young children on the autism spectrum",
+
+	"included_with_product": "included with {{product_type}}",
+
+	"autism_formation": "training in evaluation and intervention of children on the spectrum",
+	"course_lenght": "{{hours}} training hours",
+	"ebook_memorias": "course ebook and evaluation material",
+	"recording_availability": "recording available up to {{days}} days after the course",
+
+	"send_payment_proof": "send payment proof"
 }

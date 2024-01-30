@@ -1,0 +1,52 @@
+@import 'src/styles/mixins';
+
+.shop {
+  $bannerHeight: 25rem;
+  $paddingTop: toRem(87px);
+  .banner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: $bannerHeight;
+    position: relative;
+    left: 0;
+    top: 0;
+
+    &::before {
+      content: '';
+      height: 100%;
+      width: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.2);
+      position: absolute;
+    }
+    video {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .title {
+      color: white;
+      position: absolute;
+      bottom: 0;
+      font-size: toRem(80px);
+      word-break: keep-all;
+      @include flexible() {
+        font-size: toRem(38px);
+      }
+    }
+  }
+  .content {
+    width: 100%;
+    @include grid(2, 2rem) {
+      padding: $paddingTop toRem(10px);
+      gap: 1rem;
+    };
+    margin-top: 2rem;
+    grid-row-gap: 0;
+
+    .productItem {
+      width: toRem(600px);
+    }
+  }
+}

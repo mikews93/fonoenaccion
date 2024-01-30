@@ -82,5 +82,16 @@
 	"learning_assessment_description": "se enfoca en ayudar a los niños a desarrollar habilidades de lectura, escritura y comprensión. La terapia de aprendizaje está diseñada para ayudar a aquellos que tienen dificultades para leer y escribir debido a trastornos del aprendizaje como la dislexia, la disgrafía o el trastorno del procesamiento auditivo.",
 	"speech_therapy_assessment_description": "La terapia de habla puede ayudar a mejorar la pronunciación, el ritmo y la entonación del habla, lo que puede mejorar significativamente la comunicación y la calidad de vida del paciente. Durante las sesiones de terapia de habla, el fonoaudiólogo trabajará en estrecha colaboración con el paciente para identificar sus necesidades individuales y desarrollar un plan de tratamiento personalizado para abordar sus áreas de dificultad.",
 	"hearing_assessment_description": "se enfoca en mejorar la audición de los pacientes. Esta terapia está diseñada para ayudar a aquellos que tienen problemas de audición debido a la edad, el ruido, la exposición a sustancias tóxicas o una enfermedad. La terapia de audición puede incluir la adaptación de audífonos y la rehabilitación auditiva.",
-	"language_assessment_description": "se enfoca en mejorar la capacidad de las personas para comunicarse efectivamente. Esta terapia está diseñada para ayudar a aquellos que tienen dificultades para hablar, entender o usar el lenguaje. La terapia de lenguaje puede incluir el desarrollo de habilidades de comunicación social, la mejora de la gramática y la sintaxis, y la ampliación del vocabulario."
+	"language_assessment_description": "se enfoca en mejorar la capacidad de las personas para comunicarse efectivamente. Esta terapia está diseñada para ayudar a aquellos que tienen dificultades para hablar, entender o usar el lenguaje. La terapia de lenguaje puede incluir el desarrollo de habilidades de comunicación social, la mejora de la gramática y la sintaxis, y la ampliación del vocabulario.",
+	"course": "curso",
+	"autism_course_title": "curso para profesionales de evaluación e intervención para niños pequeños dentro del espectro autista",
+
+	"included_with_product": "includio con el {{product_type}}",
+
+	"autism_formation": "formación en evaluación e intervención de niños en el espectro",
+	"course_lenght": "{{hours}} horas de formación",
+	"ebook_memorias": "ebook del curso y material de evaluación",
+	"recording_availability": "grabación disponible hasta {{days}} días después del curso",
+
+	"send_payment_proof": "enviar comprobante de pago"
 }

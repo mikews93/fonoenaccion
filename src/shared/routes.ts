@@ -10,8 +10,8 @@ export enum ROUTES {
 
 export enum PUBLIC_ROUTES {
 	START = '/',
-	SHOP = '/shop',
-	BLOG = '/blog',
+	SHOP = 'shop',
+	// BLOG = '/blog',
 }
 
 /**

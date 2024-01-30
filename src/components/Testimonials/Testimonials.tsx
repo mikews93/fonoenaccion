@@ -14,72 +14,22 @@ export const Testimonials = () => {
 	 */
 	const testimonials = [
 		{
-			_createdAt: '2022-06-09T15:39:14Z',
-			_id: 'c88a888f-70ce-4713-9f8b-e403ce1562da',
-			_rev: 'oV5AkreV0DW9Fuq9c9Pl0s',
-			_type: 'testimonials',
-			_updatedAt: '2022-06-11T08:25:24Z',
-			company: 'Fonoaudiologia en acción',
-			feedback: 'El mejor de todos ',
-			imageurl: {
-				_type: 'image',
-				asset: {
-					_ref: 'image-d94df41ccad26dee17fd6145de6975529f3bc680-1092x1286-png',
-					_type: 'reference',
-				},
-				crop: {
-					_type: 'sanity.imageCrop',
-					bottom: 0.2232708860759497,
-					left: 0,
-					right: 0,
-					top: 0.0021468354430379867,
-				},
-				hotspot: {
-					_type: 'sanity.imageHotspot',
-					height: 0.7745822784810124,
-					width: 0.9037974683544315,
-					x: 0.5,
-					y: 0.3894379746835442,
-				},
-			},
-			name: 'Hilary Triviño',
+			picture:
+				'https://images.pexels.com/photos/3270224/pexels-photo-3270224.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+			company: 'Mamá de Isa',
+			feedback:
+				'Super  agradecida contigo por habernos ayudado con las terapias de Isabella, ya Isa habla muy bien! Y de verdad que fue un cambio radical con tus terapias. Gracias por el compromiso, la paciencia y el cariño con el que haces tu trabajo! Que sigas creciendo profesionalmente! Un abrazo!',
+			name: 'Gabriela Riofrio',
 		},
 		{
-			_createdAt: '2022-06-09T15:39:14Z',
-			_id: 'c88a888f-70ce-4713-9f8b-e403ce1562da',
-			_rev: 'oV5AkreV0DW9Fuq9c9Pl0s',
-			_type: 'testimonials',
-			_updatedAt: '2022-06-11T08:25:24Z',
-			company: 'Fonoaudiologia en acción',
-			feedback: 'El mejor de todos ',
-			imageurl: {
-				_type: 'image',
-				asset: {
-					_ref: 'image-d94df41ccad26dee17fd6145de6975529f3bc680-1092x1286-png',
-					_type: 'reference',
-				},
-				crop: {
-					_type: 'sanity.imageCrop',
-					bottom: 0.2232708860759497,
-					left: 0,
-					right: 0,
-					top: 0.0021468354430379867,
-				},
-				hotspot: {
-					_type: 'sanity.imageHotspot',
-					height: 0.7745822784810124,
-					width: 0.9037974683544315,
-					x: 0.5,
-					y: 0.3894379746835442,
-				},
-			},
-			name: 'Mike',
+			picture:
+				'https://images.pexels.com/photos/325265/pexels-photo-325265.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+			company: 'Mamá de zhaky',
+			feedback:
+				'Gracias Hillary, 🥰 en verdad apreciamos tu cariño y dedicación en este tiempo con Zhaky.',
+			name: 'Kim decena',
 		},
 	];
-	// const [testimonials] = useRequest<TestimonialType[]>({
-	// 	path: '*[_type == "testimonials"]',
-	// 	options: { isSanity: true },
-	// });
 
 	/**
 	 * State
@@ -106,7 +56,7 @@ export const Testimonials = () => {
 						<>
 							<div className={styles.item}>
 								<img
-									src='https://cdn.sanity.io/images/8shaqiaz/production/d94df41ccad26dee17fd6145de6975529f3bc680-1092x1286.png?rect=0,3,1092,996'
+									src={testimonials[currentIndex].picture}
 									alt={testimonials[currentIndex].name}
 								/>
 								<div className={styles.content}>

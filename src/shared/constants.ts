@@ -216,9 +216,9 @@ export const SWITCH_COOKIE = `vd8-switch-cookie-${cookieDomain}`;
 
 export enum PARTIAL_SERVICES {
 	general = 'general',
-	swallowing = 'swallowing',
-	learning = 'learning',
+	// swallowing = 'swallowing',
+	// learning = 'learning',
 	speech_therapy = 'speech_therapy',
-	hearing = 'hearing',
+	// hearing = 'hearing',
 	language = 'language',
 }

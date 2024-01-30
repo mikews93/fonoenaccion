@@ -16,7 +16,6 @@ import {
 } from '@ant-design/icons';
 import { Button, DatePicker, Form, Image, Menu, MenuProps, Select, Typography } from 'antd';
 import { useForm } from 'antd/es/form/Form';
-import { motion } from 'framer-motion';
 import classNames from 'classnames';
 
 // @components
