@@ -38,6 +38,9 @@ import { PARTIAL_SERVICES } from 'shared/constants';
 // @styles
 import styles from './styles.module.scss';
 import { useSharedDataContext } from 'shared/context/useSharedData';
+import { getWhatsappMessageMeURL } from 'shared/utils/SocialMedia';
+import { formatDate } from 'shared/utils/Date';
+import moment from 'moment';
 
 const iconsMapper: { [key in PARTIAL_SERVICES]: ReactNode } = {
 	[PARTIAL_SERVICES.general]: <TbTriangleSquareCircle />,
@@ -76,7 +79,15 @@ const Start = () => {
 	const handleSelectService: MenuProps['onSelect'] = ({ key }) =>
 		form.setFieldValue('serviceType', key);
 	const handleSubmit = (values: Appointment) => {
-		console.log(values);
+		const url = getWhatsappMessageMeURL(
+			undefined,
+			translate('appointment_wp_message', {
+				...values,
+				serviceType: `${translate(values.serviceType)}`,
+				appointmentDate: moment(values.appointmentDate).format('DD/MM/YYYY'),
+			})
+		);
+		return window.open(url, '_blank');
 	};
 
 	/**
@@ -126,7 +137,10 @@ const Start = () => {
 							<Form.Item name='location'>
 								<AppointmentItem icon={<EnvironmentOutlined />} name='location' />
 							</Form.Item>
-							<Form.Item name='appointmentDate'>
+							<Form.Item
+								name='appointmentDate'
+								rules={[{ required: true, message: translate('required_field') }]}
+							>
 								<AppointmentItem
 									icon={<CalendarOutlined />}
 									type='secondary'

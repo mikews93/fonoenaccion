@@ -96,5 +96,8 @@
 
 	"send_payment_proof": "send payment proof",
 
-	"our_office": "Our office"
+	"our_office": "Our office",
+	"appointment_wp_message": "Hola!, quiero agendar una cita de {{serviceType}} para el dia {{appointmentDate}} en la sede de {{location}} tienen disponibilidad?",
+
+	"required_field": "required field"
 }
