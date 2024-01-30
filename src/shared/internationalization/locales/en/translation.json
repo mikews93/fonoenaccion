@@ -94,5 +94,7 @@
 	"ebook_memorias": "course ebook and evaluation material",
 	"recording_availability": "recording available up to {{days}} days after the course",
 
-	"send_payment_proof": "send payment proof"
+	"send_payment_proof": "send payment proof",
+
+	"our_office": "Our office"
 }

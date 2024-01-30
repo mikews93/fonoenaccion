@@ -33,13 +33,14 @@
       word-break: keep-all;
       @include flexible() {
         font-size: toRem(38px);
+        padding: 0;
       }
     }
   }
   .content {
     width: 100%;
     @include grid(2, 2rem) {
-      padding: $paddingTop toRem(10px);
+      padding: 1rem toRem(10px);
       gap: 1rem;
     };
     margin-top: 2rem;
@@ -47,6 +48,10 @@
 
     .productItem {
       width: toRem(600px);
+      overflow: hidden;
+      @include mediaScreen {
+        width: 100%;
+      }
     }
   }
 }

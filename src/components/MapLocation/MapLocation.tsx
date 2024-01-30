@@ -55,7 +55,7 @@ export const MapLocation = () => {
 							{/* {`${translate('howToGetHere')}`} */}
 							{`${translate('our_office')}`}
 						</Typography.Title>
-						<ReactPlayer stopOnUnmount width='100%' loop muted url='/assets/office.mp4' />
+						<video width='100%' autoPlay loop muted src='/assets/office.mp4' />
 						<span className={styles.address}>
 							<EnvironmentOutlined />
 							<Typography.Text>

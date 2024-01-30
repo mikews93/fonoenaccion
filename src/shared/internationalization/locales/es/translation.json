@@ -93,5 +93,7 @@
 	"ebook_memorias": "ebook del curso y material de evaluación",
 	"recording_availability": "grabación disponible hasta {{days}} días después del curso",
 
-	"send_payment_proof": "enviar comprobante de pago"
+	"send_payment_proof": "enviar comprobante de pago",
+
+	"our_office": "Nuestra oficina"
 }

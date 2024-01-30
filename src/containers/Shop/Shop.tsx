@@ -22,10 +22,7 @@ export default function Shop() {
 		return window.open(
 			getWhatsappMessageMeURL(
 				'573236236284',
-				`Hola! 
-         acabo de hacer el pago del curso para evaluacion e intervención en autismo mi nombre es (Reemplaza este texto con tu nombre)
-         y adjunto el comprobate de pago (adjunta el comprobate de tu pago en este mensaje)
-        `
+				`Hola! mi nombre es *(Reemplaza este texto con tu nombre completo)* acabo de hacer el pago del curso para evaluacion e intervención en autismo y adjunto el comprobate de pago *(adjunta el comprobate de tu pago en este mensaje)*`
 			)
 		);
 	};
