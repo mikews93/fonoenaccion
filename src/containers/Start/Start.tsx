@@ -41,6 +41,7 @@ import { useSharedDataContext } from 'shared/context/useSharedData';
 import { getWhatsappMessageMeURL } from 'shared/utils/SocialMedia';
 // import { formatDate } from 'shared/utils/Date';
 import moment from 'moment';
+import { useScreen } from 'shared/hooks/useScreen';
 
 const iconsMapper: { [key in PARTIAL_SERVICES]: ReactNode } = {
 	[PARTIAL_SERVICES.general]: <TbTriangleSquareCircle />,
@@ -70,7 +71,7 @@ const Start = () => {
 	/**
 	 * Hooks
 	 */
-	const [{ isMobileView }] = useSharedDataContext();
+	const { width } = useScreen();
 	const [form] = useForm<Appointment>();
 
 	/**
@@ -116,7 +117,7 @@ const Start = () => {
 					<Form
 						form={form}
 						initialValues={initialValues}
-						layout={isMobileView ? 'vertical' : 'inline'}
+						layout={width < 1300 ? 'vertical' : 'inline'}
 						onFinish={handleSubmit}
 						className={styles.appointment}
 					>

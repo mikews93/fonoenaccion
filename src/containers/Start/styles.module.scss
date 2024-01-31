@@ -48,12 +48,13 @@
     transform: translate(-6%, -40%);
     max-height: 258px;
 
-    @include mediaScreen(1024px) {
+    @include mediaScreen(1500px) {
       transform: unset;
       max-height: unset;
       width: 100%;
       padding: 1rem;
     }
+    
     @include flexible($direction: column, $padding:1rem 2.5rem, $max-width:1500px, $margin: auto) {
       position: relative;  
       grid-column: unset;
@@ -90,7 +91,8 @@
           color: var(--fna-colorTextSecondary);
         }
       }
-      @media screen and (max-width: 1500px) {
+
+      @media screen and (max-width: 1300px) {
         flex-direction: column;
 
         h3 {
@@ -101,7 +103,7 @@
     
 
     .scheduleAppointment {
-      @include mediaScreen(1024px) {
+      @include mediaScreen(1300px) {
         flex-wrap: wrap;
         gap: 0;
         justify-content: center;
