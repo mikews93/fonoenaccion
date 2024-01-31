@@ -55,6 +55,9 @@
 
 @media screen and (max-width: 500px) {
   .social {
-    display: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: relative;
+    bottom: 0rem;
   }
 }

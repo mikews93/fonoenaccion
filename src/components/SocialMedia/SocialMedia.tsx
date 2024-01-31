@@ -5,6 +5,7 @@ import { getWhatsappMessageMeURL } from 'shared/utils/SocialMedia';
 
 // @styles
 import styles from './styles.module.scss';
+import { translate } from 'shared/internationalization/translate';
 
 type SocialMediaType = {
 	name: string;
@@ -19,25 +20,31 @@ const SocialMedia = () => {
 			icon: '/images/whatsapp.svg',
 			link: getWhatsappMessageMeURL(),
 			name: 'Whatsapp',
-			tooltip: 'Contact me on WhatsApp',
+			tooltip: translate('contactMe', { platform: 'WhatsApp' }),
+		},
+		{
+			icon: '/images/telegram.svg',
+			link: 'https://t.me/+brjc6PpkJKExOTgx',
+			name: 'Telegram',
+			tooltip: translate('joinMe', { platform: 'Telegram' }),
 		},
 		{
 			icon: '/images/instagram.svg',
 			link: 'https://www.instagram.com/fonoenaccion',
-			name: 'instagram',
-			tooltip: 'Follow my work on Instagram',
+			name: 'Instagram',
+			tooltip: translate('followMe', { platform: 'Instagram' }),
 		},
 		{
 			icon: '/images/linkedIn.svg',
 			link: 'https://www.linkedin.com/in/fono-en-accion-82568928b/',
 			name: 'LinkedIn',
-			tooltip: 'Contact me on LinkedIn',
+			tooltip: translate('contactMe', { platform: 'LinkedIn' }),
 		},
 		{
 			icon: '/images/youtube.svg',
 			link: 'https://www.youtube.com/@fonoenaccion1887',
 			name: 'YouTube',
-			tooltip: 'Watch my videos on YouTube',
+			tooltip: translate('watchMe', { platform: 'YouTube' }),
 		},
 	];
 

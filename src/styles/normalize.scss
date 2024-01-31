@@ -293,3 +293,8 @@ button {
 button[role='switch'][aria-checked='false'] {
   background: var(--fna-colorBgSpotlight) !important;
 }
+
+.ant-tooltip-inner {
+  color: var(--fna-colorText) !important;
+  background-color: var(--fna-colorBgSpotlight) !important;
+}

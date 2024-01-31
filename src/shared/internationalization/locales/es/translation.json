@@ -98,5 +98,10 @@
 	"our_office": "Nuestra oficina",
 	"appointment_wp_message": "Hola!, quiero agendar una cita de {{serviceType}} para el dia {{appointmentDate}} en la sede de {{location}} tienen disponibilidad?",
 
-	"required_field": "campo requerido"
+	"required_field": "campo requerido",
+
+	"contactMe": "Contactame en {{platform}}",
+	"joinMe": "Unete a mi comunidad en {{platform}}",
+	"followMe": "Sigue mi trabajo en {{platform}}",
+	"watchMe": "Mira mis videos en {{platform}}"
 }
