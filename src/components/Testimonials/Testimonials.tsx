@@ -4,33 +4,12 @@ import MotionWrap from 'components/Wrapper/MotionWrapper';
 import { useState } from 'react';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import { translate } from 'shared/internationalization/translate';
+import { testimonials } from './constants';
 
 // @styles
 import styles from './styles.module.scss';
 
 export const Testimonials = () => {
-	/**
-	 * Queries
-	 */
-	const testimonials = [
-		{
-			picture:
-				'https://images.pexels.com/photos/3270224/pexels-photo-3270224.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-			company: 'Mamá de Isa',
-			feedback:
-				'Super  agradecida contigo por habernos ayudado con las terapias de Isabella, ya Isa habla muy bien! Y de verdad que fue un cambio radical con tus terapias. Gracias por el compromiso, la paciencia y el cariño con el que haces tu trabajo! Que sigas creciendo profesionalmente! Un abrazo!',
-			name: 'Gabriela Riofrio',
-		},
-		{
-			picture:
-				'https://images.pexels.com/photos/325265/pexels-photo-325265.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-			company: 'Mamá de zhaky',
-			feedback:
-				'Gracias Hillary, 🥰 en verdad apreciamos tu cariño y dedicación en este tiempo con Zhaky.',
-			name: 'Kim decena',
-		},
-	];
-
 	/**
 	 * State
 	 */
