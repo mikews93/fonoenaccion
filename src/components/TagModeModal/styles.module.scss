@@ -1,9 +1,0 @@
-@import 'src/styles/variables';
-
-.tagModeModal {
-  :global {
-    .ant-modal-content {
-      border-radius: $border-radius;
-    }
-  }
-}

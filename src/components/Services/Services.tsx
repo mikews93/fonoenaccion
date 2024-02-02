@@ -2,12 +2,12 @@ import { Typography } from 'antd';
 import { capitalize } from 'lodash';
 import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
-import { FcIdea } from 'react-icons/fc';
+// import { FcIdea } from 'react-icons/fc';
 import { RiUserVoiceLine } from 'react-icons/ri';
-import { FaAssistiveListeningSystems } from 'react-icons/fa';
+// import { FaAssistiveListeningSystems } from 'react-icons/fa';
 import { TbTriangleSquareCircle } from 'react-icons/tb';
 import { TbLanguage } from 'react-icons/tb';
-import { GiFruitBowl } from 'react-icons/gi';
+// import { GiFruitBowl } from 'react-icons/gi';
 
 // @components
 import AppWrapper from 'components/Wrapper/AppWrapper';
