@@ -39,7 +39,7 @@ export default function Shop() {
 			seller: '/images/startBanner.jpeg',
 			title: 'autism_course_title',
 			type: translate('course'),
-			expiresAt: moment('02-18-2024'),
+			expiresAt: moment('02-18-2024', 'MM-DD-YYYY'),
 			actions: [
 				<Paypal />,
 				<Button
